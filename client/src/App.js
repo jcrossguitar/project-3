@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Alert } from 'reactstrap';
 
 function App() {
   return (
@@ -10,6 +11,9 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <Alert color="secondary">
+        This is a secondary alert — check it out!
+        </Alert>
         <a
           className="App-link"
           href="https://reactjs.org"
