@@ -11,6 +11,15 @@ router.get('/api/health', function(req, res, next) {
   });
 });
 
+router.get('/api/cheese/:id', (req, res, next) => {
+  console.log("REQUEST CHEESE ID:", req.params.id);
+  res.json({
+    name: "Humbolt Fog",
+    price: 1500,
+    description: "Meh"
+  });
+});
+
   router.get('*', (req,res) =>{
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
   });
