@@ -1,1 +1,1 @@
-export * from '.NoMatch.component';
+export * from './NoMatch.component';

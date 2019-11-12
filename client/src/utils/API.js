@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 export default class API {
-    static getCheeseByID(cheeseId) {
-        return axios.get(`localhost:5000/api/cheese/${cheeseId}`);
-    }
+	static getCheeseById(cheeseId) {
+		console.log('getCheeseById(cheeseId)', cheeseId);
+		return axios.get(`/api/cheese/${cheeseId}`);
+	}
 }
-
