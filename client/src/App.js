@@ -21,6 +21,7 @@ function App() {
         <Route exact path="/about" component={About} />
         <Route exact path="/inventory" component={InventoryPage} />
         <Route exact path="/assembly" component={AssemblyPage} />
+        <Route exact path="/example/" component={ExamplePage} />
         <Route exact path="/sales" component={SalesPage} />
         <Route exact path="/Qc" component={QcPage} />
         <Route exact path="/shipping" component={ShippingPage} />
