@@ -14,49 +14,56 @@ router.get('/api/health', function(req, res, next) {
 router.get('/api/login', function(req, res, next) {
   res.json({
     app: "project_3",
-    health: 200
+    health: 200,
+    name: "login"
   });
 });
 
 router.get('/api/admin', function(req, res, next) {
   res.json({
     app: "project_3",
-    health: 200
+    health: 200,
+    name: "admin"
   });
 });
 
 router.get('/api/inventory', function(req, res, next) {
   res.json({
     app: "project_3",
-    health: 200
+    health: 200,
+    name: "inventory"
   });
 });
 
 router.get('/api/assembly', function(req, res, next) {
   res.json({
     app: "project_3",
-    health: 200
+    health: 200,
+    name: "assembly"
   });
 });
 
 router.get('/api/qualityControl', function(req, res, next) {
   res.json({
     app: "project_3",
-    health: 200
+    health: 200,
+    name: "qc"
   });
 });
 
 router.get('/api/shipping', function(req, res, next) {
   res.json({
     app: "project_3",
-    health: 200
+    health: 200,
+    name: "shipping"
   });
 });
 
 router.get('/api/vieworder', function(req, res, next) {
   res.json({
     app: "project_3",
-    health: 200
+    health: 200,
+    name: "vieworder"
   });
 });
 
