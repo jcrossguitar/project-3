@@ -3,6 +3,7 @@ module.exports = {
     Sales: require("./sales"),
     QC: require("./qc"),
     Assembly: require("./assembly"),
-    Shipping: require("./shipping")
+    Shipping: require("./shipping"),
+    viewOrder: require("./viewOrder")
   };
   
