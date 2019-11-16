@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const inventorySchema = new Schema({
+const exampleSchema = new Schema({
     _id: { type: Number, required: true, unique: true },
     clientName: { type: String, required: true },
     pointOfContact: { type: String, required: true },
@@ -10,6 +10,6 @@ const inventorySchema = new Schema({
     orderRequest: { type: [String], required: true }
 });
 
-const Inventory = mongoose.model("Inventory", inventorySchema);
+const Example = mongoose.model("Inventory", exampleSchema);
 
-module.exports = Inventory;
+module.exports = Example;
