@@ -20,12 +20,12 @@ export class ExamplePage extends React.Component {
   render() {
     return (
       <div>
-        <h1>Example Page (Route: {this.props.match.url})</h1>
+        {/* <h1>Example Page (Route: {this.props.match.url})</h1>
         <ReactRouterDetails
           location={this.props.location}
           history={this.props.history}
           match={this.props.match}
-        />
+        /> */}
       </div>
     );
   }
