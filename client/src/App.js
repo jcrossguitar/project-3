@@ -6,6 +6,7 @@ import { Home } from './components/Home/Home.component';
 import { About } from './components/About/About.component';
 import { CheeseDetail } from './pages/CheeseDetail/CheeseDetail.component';
 import { InventoryPage } from './pages/InventoryPage/InventoryPage.component';
+import { ViewOrderPage } from './pages/ViewOrderPage/ViewOrderPage.component';
 import { ShippingPage } from './pages/ShippingPage/ShippingPage.component';
 import { AssemblyPage } from './pages/AssemblyPage/AssemblyPage.component';
 import { QcPage } from './pages/QcPage/QcPage.component';
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/example/" component={ExamplePage} />
         <Route exact path="/sales" component={SalesPage} />
         <Route exact path="/Qc" component={QcPage} />
+        <Route exact path="/vieworder" component={ViewOrderPage} />
         <Route exact path="/shipping" component={ShippingPage} />
         <Route exact path="/cheese/:id" component={CheeseDetail} />
         <Route exact path="/example/:id" component={ExamplePage} />
