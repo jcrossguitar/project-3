@@ -14,3 +14,5 @@ describe('Qc Component', () => {
     expect(wrapper).toBeDefined();
   });
 });
+
+
