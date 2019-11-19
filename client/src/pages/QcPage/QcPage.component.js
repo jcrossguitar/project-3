@@ -33,13 +33,13 @@ export class QcPage extends React.Component {
             <td id="cell1-0"></td>
             <td id="cell1-1"></td>
             <td id="cell1-2"></td>
-            <td id="cell1-3"></td>
+            <td id="cell1-3">{this.state.date}</td>
           </tr>
           <tr id="row2">order 2
             <td id="cell2-0"></td>
             <td id="cell2-1"></td>
             <td id="cell2-2"></td>
-            <td id="cell1-3"></td>
+            <td id="cell1-3">{this.state.date}</td>
           </tr>
         </tbody>
       </table>
@@ -65,13 +65,13 @@ export class QcPage extends React.Component {
             <td id="cell1-0"></td>
             <td id="cell1-1"></td>
             <td id="cell1-2"></td>
-            <td id="cell1-3"></td>
+            <td id="cell1-3">{this.state.date}</td>
           </tr>
           <tr id="row2">order 2
             <td id="cell2-0"></td>
             <td id="cell2-1"></td>
             <td id="cell2-2"></td>
-            <td id="cell1-3"></td>
+            <td id="cell1-3">{this.state.date}</td>
           </tr>
         </tbody>
       </table>
@@ -89,13 +89,13 @@ export class QcPage extends React.Component {
             <td id="cell1-0"></td>
             <td id="cell1-1"></td>
             <td id="cell1-2"></td>
-            <td id="cell1-3"></td>
+            <td id="cell1-3">{this.state.date}</td>
           </tr>
           <tr id="row2">order 2
             <td id="cell2-0"></td>
             <td id="cell2-1"></td>
             <td id="cell2-2"></td>
-            <td id="cell1-3"></td>
+            <td id="cell1-3">{this.state.date}</td>
           </tr>
         </tbody>
       </table>
