@@ -2,6 +2,7 @@ import React from 'react';
 import { FormPageProps } from './FormPage.propTypes'
 import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRouterDetails.component';
 import styles from './FormPage.styles.scss';
+import Form from "./form";
 
 export class FormPage extends React.Component {
   constructor(props) {
@@ -20,26 +21,8 @@ export class FormPage extends React.Component {
   render() {
     return (
       <div>
+        <Form />
 
-    <div className="form-group">
-      <input className="form-control" {...props} />
-    </div>
-  );
-}
-
-
-    <div className="form-group">
-      <textarea className="form-control" rows="20" {...props} />
-    </div>
-  );
-}
-
-
-    <button {...props} style={{ float: "right", marginBottom: 10 }} className="btn btn-success">
-      {props.children}
-    </button>
-  );
-}
 
       </div>
     );

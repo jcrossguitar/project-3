@@ -8,8 +8,10 @@ import { About } from './components/About/About.component';
 import { CheeseDetail } from './pages/CheeseDetail/CheeseDetail.component';
 import { InventoryPage } from './pages/InventoryPage/InventoryPage.component';
 import { ViewOrderPage } from './pages/ViewOrderPage/ViewOrderPage.component';
+import { ViewOrderDetail } from './pages/ViewOrderDetail/ViewOrderDetail.component';
+import { ViewOrderDetailPage } from './pages/ViewOrderDetailPage/ViewOrderDetailPage.component';
 import { ShippingPage } from './pages/ShippingPage/ShippingPage.component';
-// import { FormPage } from './pages/FormPage/FormPage.component';
+import { FormPage } from './pages/FormPage/FormPage.component';
 import { AssemblyPage } from './pages/AssemblyPage/AssemblyPage.component';
 import { QcPage } from './pages/QcPage/QcPage.component';
 import { SalesPage } from './pages/SalesPage/SalesPage.component';
@@ -27,10 +29,11 @@ function App() {
         <Route exact path="/example/" component={ExamplePage} />
         <Route exact path="/sales" component={SalesPage} />
         <Route exact path="/Qc" component={QcPage} />
-        {/* <Route exact path="/form2" component={FormPage} /> */}
+        <Route exact path="/form" component={FormPage} />
         <Route exact path="/vieworder" component={ViewOrderPage} />
         <Route exact path="/shipping" component={ShippingPage} />
         <Route exact path="/cheese/:id" component={CheeseDetail} />
+        <Route exact path="/vieworder/:id" component={ViewOrderDetail} />
         <Route exact path="/example/:id" component={ExamplePage} />
         <Route component={NoMatch} />
       </Switch>
