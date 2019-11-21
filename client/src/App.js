@@ -16,6 +16,7 @@ import { AssemblyPage } from './pages/AssemblyPage/AssemblyPage.component';
 import { QcPage } from './pages/QcPage/QcPage.component';
 import { SalesPage } from './pages/SalesPage/SalesPage.component';
 import { ExamplePage } from './pages/ExamplePage/ExamplePage.component';
+import  TestPage  from './pages/TestPage/TestPage.component';
 import { NoMatch } from './components/NoMatch';
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route exact path="/vieworder" component={ViewOrderPage} />
         <Route exact path="/shipping" component={ShippingPage} />
         <Route exact path="/cheese/:id" component={CheeseDetail} />
+        <Route exact path="/test" component={TestPage} />
         <Route exact path="/vieworder/:id" component={ViewOrderDetail} />
         <Route exact path="/example/:id" component={ExamplePage} />
         <Route component={NoMatch} />
