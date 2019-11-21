@@ -1,18 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Qc } from '.';
+import { Form } from '.';
 
-describe('Qc Component', () => {
+describe('Form Component', () => {
   let wrapper;
   beforeEach(() => {
     wrapper = shallow(
-      <Qc />
+      <Form />
     );
   });
 
-  it('should render Qc', () => {
+  it('should render Form', () => {
     expect(wrapper).toBeDefined();
   });
 });
-
-

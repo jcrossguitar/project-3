@@ -1,9 +1,10 @@
 import React from 'react';
-import { ExamplePageProps } from './ExamplePage.propTypes'
+import { FormPageProps } from './FormPage.propTypes'
 import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRouterDetails.component';
-import styles from './ExamplePage.styles.scss';
+import styles from './FormPage.styles.scss';
+import Form from "./form";
 
-export class ExamplePage extends React.Component {
+export class FormPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -20,16 +21,13 @@ export class ExamplePage extends React.Component {
   render() {
     return (
       <div>
-        {/* <h1>Example Page (Route: {this.props.match.url})</h1>
-        <ReactRouterDetails
-          location={this.props.location}
-          history={this.props.history}
-          match={this.props.match}
-        /> */}
+        <Form />
+
+
       </div>
     );
   }
 }
 
-ExamplePage.propTypes = ExamplePageProps.propTypes;
-ExamplePage.defaultProps = ExamplePageProps.defaultProps;
+FormPage.propTypes = FormPageProps.propTypes;
+FormPage.defaultProps = FormPageProps.defaultProps;

@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 
 
-
 /* GET React app. */
 router.get('/api/health', function(req, res, next) {
   res.json({
@@ -19,7 +18,7 @@ router.get('/api/login', function(req, res, next) {
   });
 });
 
-router.get('/api/admin', function(req, res, next) {
+router.get('/api/sales', function(req, res, next) {
   res.json({
     app: "project_3",
     health: 200,
@@ -43,7 +42,7 @@ router.get('/api/assembly', function(req, res, next) {
   });
 });
 
-router.get('/api/qualityControl', function(req, res, next) {
+router.get('/api/qc', function(req, res, next) {
   res.json({
     app: "project_3",
     health: 200,
@@ -56,6 +55,22 @@ router.get('/api/shipping', function(req, res, next) {
     app: "project_3",
     health: 200,
     name: "shipping"
+  });
+});
+
+router.get('/api/example', function(req, res, next) {
+  res.json({
+    app: "project_3",
+    health: 200,
+    name: "example"
+  });
+});
+
+router.get('/api/example/:id', function(req, res, next) {
+  res.json({
+    app: "project_3",
+    health: 200,
+    name: "example"
   });
 });
 
@@ -89,4 +104,6 @@ router.get('/api/vieworder/:id', (req, res, next) => {
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
   });
 
+  // ;asndf;kjasndf;nasdkfjas;fdn;asdnf;oasdnf;kjsandf;lasdnf
+  
 module.exports = router;

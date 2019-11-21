@@ -5,6 +5,7 @@ module.exports = {
     Assembly: require("./assembly"),
     Shipping: require("./shipping"),
     viewOrder: require("./viewOrder"),
-    Example: require("./example")
+    Example: require("./example"),
+    viewOrder: require("./viewOrder")
   };
   

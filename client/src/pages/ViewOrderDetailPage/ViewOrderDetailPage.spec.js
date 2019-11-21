@@ -1,18 +1,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Qc } from '.';
+import { ViewOrderDetail } from '.';
 
-describe('Qc Component', () => {
+describe('ViewOrderDetail Component', () => {
   let wrapper;
   beforeEach(() => {
     wrapper = shallow(
-      <Qc />
+      <ViewOrderDetail />
     );
   });
 
-  it('should render Qc', () => {
+  it('should render ViewOrderDetail', () => {
     expect(wrapper).toBeDefined();
   });
 });
-
-
