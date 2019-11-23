@@ -5,10 +5,10 @@ const db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/...titlegoeshere?"
+  "mongodb://localhost/products"
 );
 
-const bookSeed = [
+const viewOrderSeed = [
 
   {
     clientName: "Alexis",
@@ -52,9 +52,9 @@ const bookSeed = [
   }
 ];
 
-db.viewOrder
+db.products
   .remove({})
-  .then(() => db.viewOrder.collection.insertMany(viewOrderSeed))
+  .then(() => db.products.collection.insertMany(viewOrderSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
