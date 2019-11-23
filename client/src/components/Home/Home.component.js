@@ -3,6 +3,7 @@ import { Alert } from 'reactstrap';
 // import { useAuth0 } from "../../react-auth0-spa";
 // import NavBar from "../Nav/NavBar";
 
+
 export const Home = props => {
 	return (
 		<Alert color="primary">

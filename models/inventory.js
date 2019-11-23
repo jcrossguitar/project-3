@@ -10,6 +10,6 @@ const inventorySchema = new Schema({
     orderRequest: { type: [String], required: true }
 });
 
-const Book = mongoose.model("Inventory", inventorySchema);
+const Inventory = mongoose.model("Inventory", inventorySchema);
 
 module.exports = Inventory;
