@@ -14,6 +14,9 @@ import { QcPage } from './pages/QcPage/QcPage.component';
 import { SalesPage } from './pages/SalesPage/SalesPage.component';
 import { ExamplePage } from './pages/ExamplePage/ExamplePage.component';
 import { NoMatch } from './components/NoMatch';
+import Profile from "./components/Profile";
+import history from "./utils/history";
+import PrivateRoute from "./components/PrivateRoute";
 
 
 function App() {
@@ -32,22 +35,24 @@ function App() {
         </header>
       </div>
     );
+  return (
+    <Router history={history}>
 
-    // <Router>
-    //   <Switch>
-    //     <Route exact path="/" component={Home} />
-    //     <Route exact path="/about" component={About} />
-    //     <Route exact path="/inventory" component={InventoryPage} />
-    //     <Route exact path="/assembly" component={AssemblyPage} />
-    //     <Route exact path="/sales" component={SalesPage} />
-    //     <Route exact path="/Qc" component={QcPage} />
-    //     <Route exact path="/shipping" component={ShippingPage} />
-    //     <Route exact path="/cheese/:id" component={CheeseDetail} />
-    //     <Route exact path="/example/:id" component={ExamplePage} />
-    //     <Route component={NoMatch} />
-    //   </Switch>
-    // </Router>
-
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <PrivateRoute path="/profile" component={Profile} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/inventory" component={InventoryPage} />
+        <Route exact path="/assembly" component={AssemblyPage} />
+        <Route exact path="/sales" component={SalesPage} />
+        <Route exact path="/Qc" component={QcPage} />
+        <Route exact path="/shipping" component={ShippingPage} />
+        <Route exact path="/cheese/:id" component={CheeseDetail} />
+        <Route exact path="/example/:id" component={ExamplePage} />
+        <Route component={NoMatch} />
+      </Switch>
+    </Router>
+);
 }
 
 export default App;
