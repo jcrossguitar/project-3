@@ -2,12 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-<<<<<<< HEAD
 import { useAuth0 } from "./react-auth0-spa";
 import NavBar from "./components/Nav/NavBar";
-=======
-// import { useAuth0 } from './react-auth0-spa';
->>>>>>> f670fcb424b3d9ea6a1b7cf281c7d91ce03c53f6
 import { Home } from './components/Home/Home.component';
 import { About } from './components/About/About.component';
 import { CheeseDetail } from './pages/CheeseDetail/CheeseDetail.component';
