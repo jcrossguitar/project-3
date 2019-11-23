@@ -1,7 +1,9 @@
 import React from 'react';
 import { InventoryPageProps } from './InventoryPage.propTypes'
 import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRouterDetails.component';
-import styles from './InventoryPage.styles.scss';
+import '../../../src/App.css';
+import Nav from '../../components/Nav/Nav.component';
+import Heading from "../../components/Heading/Heading.component";
 
 export class InventoryPage extends React.Component {
   constructor(props) {
@@ -20,12 +22,8 @@ export class InventoryPage extends React.Component {
   render() {
     return (
       <div>
-        <h1>Inventory Page (Route: {this.props.match.url})</h1>
-        <ReactRouterDetails
-          location={this.props.location}
-          history={this.props.history}
-          match={this.props.match}
-        />
+        <Nav />
+        <h1 className="heading">inventory</h1>
       </div>
     );
   }

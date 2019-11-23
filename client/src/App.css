@@ -1,22 +1,107 @@
-.App {
-  text-align: center;
+
+html, body, #root, #root>div {
+  background-color: #bfee14;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.imageDiv {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 10%;
 }
 
-.App-link {
-  color: #09d3ac;
+.title {
+  font-family: 'Blinker', sans-serif;
+  font-weight: bold;
+  font-size: 10rem;
+  color: #3c8005;
+  margin-top: -8rem;
+  margin-left: -2rem;
+}
+
+div.imageDiv a:hover {
+  text-decoration: none;
+}
+
+.heading {
+  font-family: 'Blinker', sans-serif;
+  font-weight: bold;
+  font-size: 4rem;
+  color: #3c8005;
+  margin: 2rem;
+
+}
+
+.subheading {
+  font-family: 'Blinker', sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  color: #183302;
+  margin-left: 2rem;
+
+}
+
+ul {
+  font-family: 'Blinker', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #183302;
+  margin-left: 2rem;
+
+}
+
+.submit, .cancel {
+  width: 10%;
+  font-family: 'Blinker', sans-serif;
+  background-color: #3c8005;
+  border: #183302 4px solid;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: .5rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  font-size: 2rem;
+  line-height: 1;
+  color: #dfecd3;
+  font-weight: bold;
+}
+
+.submit:hover, .cancel:hover {
+  background-color: #dfecd3;
+  border: #3c8005 3px solid;
+  color: #183302;
+}
+
+.navbar {
+  font-family: 'Blinker', sans-serif;
+  font-weight: bold;
+  background-color: #183302;
+  font-size: 1.5rem;
+  color: #bfee14;
+  margin-top: 1rem;
+}
+
+.navbar-brand:hover, .navbar:hover {
+  color: #ee5914;
+  font-weight: bold;
+}
+
+table {
+  font-family: 'Blinker', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #183302;
+  margin-left: 4rem;
+}
+
+form {
+  width: 82.5%;
+  font-family: 'Blinker', sans-serif;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #183302;
+  margin-left: 2rem;
+  border: 3px solid #183302;
 }

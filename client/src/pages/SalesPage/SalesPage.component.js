@@ -1,7 +1,11 @@
 import React from 'react';
 import { SalesPageProps } from './SalesPage.propTypes'
 import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRouterDetails.component';
-import styles from './SalesPage.styles.scss';
+import '../../../src/App.css';
+import Nav from '../../components/Nav/Nav.component';
+import Heading from "../../components/Heading/Heading.component";
+import ToggleSwitch from "../../components/Toggle/Toggle.component";
+
 
 export class SalesPage extends React.Component {
   constructor(props) {
@@ -20,12 +24,16 @@ export class SalesPage extends React.Component {
   render() {
     return (
       <div>
-        <h1>Sales Page (Route: {this.props.match.url})</h1>
-        <ReactRouterDetails
-          location={this.props.location}
-          history={this.props.history}
-          match={this.props.match}
-        />
+        <Nav />
+        <h1 className="heading">sales</h1>
+        <h3 className="subheading">IN PROGRESS:</h3>
+        <ul>
+          <li>Item One<ToggleSwitch></ToggleSwitch></li>
+          <li>Item Two<ToggleSwitch></ToggleSwitch></li>
+          <li>Item Three<ToggleSwitch></ToggleSwitch></li>
+          <li>Item Four<ToggleSwitch></ToggleSwitch></li>
+        </ul>
+        <button className="submit">SUBMIT CHANGES</button><button className="cancel">CANCEL</button>
       </div>
     );
   }

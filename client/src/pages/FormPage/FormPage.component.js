@@ -1,7 +1,9 @@
 import React from 'react';
 import { FormPageProps } from './FormPage.propTypes'
 import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRouterDetails.component';
-import styles from './FormPage.styles.scss';
+import '../../../src/App.css';
+import Nav from '../../components/Nav/Nav.component';
+import Heading from "../../components/Heading/Heading.component";
 import Form from "./form";
 
 export class FormPage extends React.Component {
@@ -21,9 +23,8 @@ export class FormPage extends React.Component {
   render() {
     return (
       <div>
+        <Nav />
         <Form />
-
-
       </div>
     );
   }

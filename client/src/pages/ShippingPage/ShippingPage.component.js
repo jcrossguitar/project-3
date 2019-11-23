@@ -1,7 +1,9 @@
 import React from 'react';
 import { ShippingPageProps } from './ShippingPage.propTypes'
 import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRouterDetails.component';
-import styles from './ShippingPage.styles.scss';
+import '../../../src/App.css';
+import Nav from '../../components/Nav/Nav.component';
+import Heading from "../../components/Heading/Heading.component";
 
 export class ShippingPage extends React.Component {
   constructor(props) {
@@ -20,12 +22,8 @@ export class ShippingPage extends React.Component {
   render() {
     return (
       <div>
-        <h1>Shipping Page (Route: {this.props.match.url})</h1>
-        <ReactRouterDetails
-          location={this.props.location}
-          history={this.props.history}
-          match={this.props.match}
-        />
+        <Nav />
+        <h1 className="heading">shipping</h1>
       </div>
     );
   }
