@@ -3,7 +3,6 @@ import { InventoryPageProps } from './InventoryPage.propTypes'
 import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRouterDetails.component';
 import '../../../src/App.css';
 import Nav from '../../components/Nav/Nav.component';
-import Heading from "../../components/Heading/Heading.component";
 
 export class InventoryPage extends React.Component {
   constructor(props) {

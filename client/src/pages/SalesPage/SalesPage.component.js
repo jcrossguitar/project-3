@@ -3,7 +3,6 @@ import { SalesPageProps } from './SalesPage.propTypes'
 import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRouterDetails.component';
 import '../../../src/App.css';
 import Nav from '../../components/Nav/Nav.component';
-import Heading from "../../components/Heading/Heading.component";
 import ToggleSwitch from "../../components/Toggle/Toggle.component";
 
 

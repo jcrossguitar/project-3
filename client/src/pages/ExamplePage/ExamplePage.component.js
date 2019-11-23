@@ -4,7 +4,6 @@ import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRou
 import '../../../src/App.css';
 import Nav from '../../components/Nav/Nav.component';
 import ToggleSwitch from '../../components/Toggle/Toggle.component';
-import Heading from "../../components/Heading/Heading.component";
 
 export class ExamplePage extends React.Component {
   constructor(props) {
@@ -24,7 +23,7 @@ export class ExamplePage extends React.Component {
     return (
       <div>
         <Nav />
-        <Heading>This is a heading</Heading>
+        
         <h3 className="subheading">IN PROGRESS:</h3>
         <ul>
           <li>Item One<ToggleSwitch></ToggleSwitch></li>

@@ -3,7 +3,6 @@ import { ShippingPageProps } from './ShippingPage.propTypes'
 import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRouterDetails.component';
 import '../../../src/App.css';
 import Nav from '../../components/Nav/Nav.component';
-import Heading from "../../components/Heading/Heading.component";
 
 export class ShippingPage extends React.Component {
   constructor(props) {
