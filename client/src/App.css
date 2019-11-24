@@ -83,6 +83,11 @@ ul {
   margin-top: 1rem;
 }
 
+.navbar-icon {
+  margin-left: 1rem;
+  margin-right: 1.5rem;
+}
+
 .navbar-brand:hover, .navbar:hover {
   color: #ee5914;
   font-weight: bold;
