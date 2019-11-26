@@ -35,33 +35,29 @@ function App() {
   }
   return (
       <div className="App">
-        <header>
-          <NavBar />
-        </header>
-      </div>
-    );
-  return (
-    <Router history={history}>
-
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <PrivateRoute path="/profile" component={Profile} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/inventory" component={InventoryPage} />
-        <Route exact path="/assembly" component={AssemblyPage} />
-        <Route exact path="/example/" component={ExamplePage} />
-        <Route exact path="/sales" component={SalesPage} />
-        <Route exact path="/Qc" component={QcPage} />
-        <Route exact path="/form" component={FormPage} />
-        <Route exact path="/vieworder" component={ViewOrderPage} />
-        <Route exact path="/shipping" component={ShippingPage} />
-        <Route exact path="/cheese/:id" component={CheeseDetail} />
-        <Route exact path="/test" component={TestPage} />
-        <Route exact path="/vieworder/:id" component={ViewOrderDetail} />
-        <Route exact path="/example/:id" component={ExamplePage} />
-        <Route component={NoMatch} />
-      </Switch>
-    </Router>
+        <NavBar />
+    
+        <Router history={history}>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <PrivateRoute path="/profile" component={Profile} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/inventory" component={InventoryPage} />
+            <Route exact path="/assembly" component={AssemblyPage} />
+            <Route exact path="/example/" component={ExamplePage} />
+            <Route exact path="/sales" component={SalesPage} />
+            <Route exact path="/Qc" component={QcPage} />
+            <Route exact path="/form" component={FormPage} />
+            <Route exact path="/vieworder" component={ViewOrderPage} />
+            <Route exact path="/shipping" component={ShippingPage} />
+            <Route exact path="/cheese/:id" component={CheeseDetail} />
+            <Route exact path="/test" component={TestPage} />
+            <Route exact path="/vieworder/:id" component={ViewOrderDetail} />
+            <Route exact path="/example/:id" component={ExamplePage} />
+            <Route component={NoMatch} />
+          </Switch>
+        </Router>
+          </div>
 );
 }
 

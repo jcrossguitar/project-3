@@ -1,10 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { Alert } from 'reactstrap';
 // import { useAuth0 } from "../../react-auth0-spa";
 // import NavBar from "../Nav/NavBar";
->>>>>>> 83ffd5fdf884332fe54e1c11957db382a2616282
 
 
 export const Home = props => {
