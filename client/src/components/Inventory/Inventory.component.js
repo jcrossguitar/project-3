@@ -1,6 +1,6 @@
 import React from 'react';
 import { InventoryProps } from './Inventory.propTypes';
-import styles from './Inventory.styles.scss';
+// import styles from './Inventory.styles.scss';
 
 export const Inventory = props => {
     return (

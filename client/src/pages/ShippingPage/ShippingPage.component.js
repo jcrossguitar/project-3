@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShippingPageProps } from './ShippingPage.propTypes'
-import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRouterDetails.component';
+// import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRouterDetails.component';
 import '../../../src/App.css';
 import Nav from '../../components/Nav/Nav.component';
 
