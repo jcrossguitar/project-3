@@ -26,7 +26,7 @@ router.get('/api/sales', function(req, res, next) {
   });
 });
 
-router.get('/api/inventory', function(req, res, next) {
+router.get('/inventory', function(req, res, next) {
   res.json({
     app: "project_3",
     health: 200,
@@ -34,7 +34,14 @@ router.get('/api/inventory', function(req, res, next) {
   });
 });
 
-router.get('/api/assembly', function(req, res, next) {
+router.post('/inventory', function(req, res, next) {
+  console.log('req.body', req.body)
+  res.json({
+    message: "route hit"
+  });
+});
+
+router.get('/assembly', function(req, res, next) {
   res.json({
     app: "project_3",
     health: 200,
@@ -42,7 +49,7 @@ router.get('/api/assembly', function(req, res, next) {
   });
 });
 
-router.get('/api/qc', function(req, res, next) {
+router.get('/qc', function(req, res, next) {
   res.json({
     app: "project_3",
     health: 200,
@@ -50,7 +57,7 @@ router.get('/api/qc', function(req, res, next) {
   });
 });
 
-router.get('/api/shipping', function(req, res, next) {
+router.get('/shipping', function(req, res, next) {
   res.json({
     app: "project_3",
     health: 200,
@@ -58,7 +65,7 @@ router.get('/api/shipping', function(req, res, next) {
   });
 });
 
-router.get('/api/example', function(req, res, next) {
+router.get('/example', function(req, res, next) {
   res.json({
     app: "project_3",
     health: 200,
@@ -66,7 +73,7 @@ router.get('/api/example', function(req, res, next) {
   });
 });
 
-router.get('/api/example/:id', function(req, res, next) {
+router.get('/example/:id', function(req, res, next) {
   res.json({
     app: "project_3",
     health: 200,
@@ -74,7 +81,7 @@ router.get('/api/example/:id', function(req, res, next) {
   });
 });
 
-router.get('/api/vieworder', function(req, res, next) {
+router.get('/vieworder', function(req, res, next) {
   res.json({
     app: "project_3",
     health: 200,
@@ -82,7 +89,7 @@ router.get('/api/vieworder', function(req, res, next) {
   });
 });
 
-router.get('/api/cheese/:id', (req, res, next) => {
+router.get('/cheese/:id', (req, res, next) => {
   console.log("REQUEST CHEESE ID:", req.params.id);
   res.json({
     name: "Humbolt Fog",
@@ -91,7 +98,7 @@ router.get('/api/cheese/:id', (req, res, next) => {
   });
 });
 
-router.get('/api/vieworder/:id', (req, res, next) => {
+router.get('/vieworder/:id', (req, res, next) => {
   console.log("REQUEST ORDER ID:", req.params.id);
   res.json({
     name: "ORDER 1",
@@ -99,10 +106,6 @@ router.get('/api/vieworder/:id', (req, res, next) => {
     description: "20 MICRO-PROCESSORS"
   });
 });
-
-  router.get('*', (req,res) =>{
-    res.sendFile(path.join(__dirname+'/client/build/index.html'));
-  });
 
   // ;asndf;kjasndf;nasdkfjas;fdn;asdnf;oasdnf;kjsandf;lasdnf
   
