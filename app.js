@@ -19,8 +19,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-app.use('/', indexRouter);
+console.log('indexRouter')
+app.post('/api/test', (req, res) => res.json({ message: "hello", }))
+app.use('/api', indexRouter);
 app.use('/users', usersRouter);
+app.get('*', (req,res) =>{
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -37,7 +42,10 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.json({
+    error: err,
+    message: err.message
+  });
 });
 
 module.exports = app;
