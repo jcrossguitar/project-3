@@ -11,6 +11,6 @@ const viewOrderSchema = new Schema({
   date: { type: Date, default: Date.now}
 });
 
-const viewOrder = mongoose.model("ViewOrder", viewOrderSchema);
+const viewOrder = mongoose.model("viewOrder", viewOrderSchema);
 
-module.exports = viewOrder;
+module.exports = viewOrderModel;

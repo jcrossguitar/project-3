@@ -1,8 +1,9 @@
 import React from 'react';
 import { ViewOrderDetailPageProps } from './ViewOrderDetailPage.propTypes'
 import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRouterDetails.component';
-import styles from './ViewOrderDetailPage.styles.scss';
 import API from "../../utils/API";
+import '../../../src/App.css';
+import Nav from '../../components/Nav/Nav.component';
 import Jumbotron from "../../components/Jumbotron";
 import { Col, Row, Container } from "../../components/Grid";
 import { Link } from "react-router-dom";
@@ -27,6 +28,7 @@ export class ViewOrderDetailPage extends React.Component {
   render() {
     return (
       <Container fluid>
+        <Nav />
       <Row>
         <Col size="md-12">
           <Jumbotron>

@@ -1,7 +1,8 @@
 import React from 'react';
 import { QcPageProps } from './QcPage.propTypes'
 import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRouterDetails.component';
-import styles from './QcPage.styles.scss';
+import '../../../src/App.css';
+import Nav from '../../components/Nav/Nav.component';
 
 export class QcPage extends React.Component {
   constructor(props) {
@@ -20,10 +21,12 @@ export class QcPage extends React.Component {
   render() {
     return (
       <div>
-        <h1>To Do</h1>
+        <Nav />
+        <h1 className="heading">quality control</h1>
+        <h2  className="subheading">To Do</h2>
          <table id="todo">
         <tbody>
-          <tr id="row0">id_
+          <tr id="row0">Order ID
             <td id="cell0-0">Client</td>
             <td id="cell0-1">Time Created</td>
             <td id="cell0-2">Point of Contact</td>
@@ -52,7 +55,7 @@ export class QcPage extends React.Component {
           match={this.props.match}
         /> */}
 
-        <h1>In Progress</h1>
+        <h2 className="subheading">In Progress</h2>
          <table id="inProgress">
         <tbody>
           <tr id="row0">id_
@@ -76,7 +79,7 @@ export class QcPage extends React.Component {
         </tbody>
       </table>
 
-        <h1>Completed</h1>
+        <h2 className="subheading">Completed</h2>
          <table id="completed">
         <tbody>
           <tr id="row0">id_
