@@ -10,7 +10,7 @@ import { CheeseDetail } from './pages/CheeseDetail/CheeseDetail.component';
 import { InventoryPage } from './pages/InventoryPage/InventoryPage.component';
 import { ViewOrderPage } from './pages/ViewOrderPage/ViewOrderPage.component';
 import { ViewOrderDetail } from './pages/ViewOrderDetail/ViewOrderDetail.component';
-import { ViewOrderDetailPage } from './pages/ViewOrderDetailPage/ViewOrderDetailPage.component';
+// import { ViewOrderDetailPage } from './pages/ViewOrderDetailPage/ViewOrderDetailPage.component';
 import { ShippingPage } from './pages/ShippingPage/ShippingPage.component';
 import { FormPage } from './pages/FormPage/FormPage.component';
 import { AssemblyPage } from './pages/AssemblyPage/AssemblyPage.component';
