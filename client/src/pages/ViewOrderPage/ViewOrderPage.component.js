@@ -1,8 +1,8 @@
 import React from 'react';
 import { ViewOrderPageProps } from './ViewOrderPage.propTypes'
-import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRouterDetails.component';
-import styles from './ViewOrderPage.styles.scss';
-
+// import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRouterDetails.component';
+import '../../../src/App.css';
+import Nav from '../../components/Nav/Nav.component';
 export class ViewOrderPage extends React.Component {
   constructor(props) {
     super(props);
@@ -20,12 +20,8 @@ export class ViewOrderPage extends React.Component {
   render() {
     return (
       <div>
-        <h1>View Order Page (Route: {this.props.match.url})</h1>
-        <ReactRouterDetails
-          location={this.props.location}
-          history={this.props.history}
-          match={this.props.match}
-        />
+        <Nav />
+        <h1 className="heading">orders</h1>
       </div>
     );
   }
