@@ -1,5 +1,6 @@
 function MyVerticallyCenteredModal(props) {
     return (
+      <div>
       <Modal
         {...props}
         size="lg"
@@ -40,6 +41,7 @@ function MyVerticallyCenteredModal(props) {
           onHide={() => setModalShow(false)}
         />
       </ButtonToolbar>
+    </div>
     );
   }
   
