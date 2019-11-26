@@ -2,7 +2,9 @@ import React,{ useState } from 'react';
 // import { TestPageProps } from './TestPage.propTypes'
 import { Card, CardTitle, CardText, CardDeck, CardSubtitle, CardBody } from 'reactstrap';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Form, FormGroup, Label, Input
+  // , FormText 
+} from 'reactstrap';
 // import Modal from '../../components/Modal/Modal.component';
 import './style.css';
 import DeleteBtn from '../../components/DeleteBtn';
@@ -11,7 +13,7 @@ import DeleteBtn from '../../components/DeleteBtn';
 
 const TestPage = (props) => {
   const {
-    buttonLabel,
+    // buttonLabel,
     className
   } = props;
 
