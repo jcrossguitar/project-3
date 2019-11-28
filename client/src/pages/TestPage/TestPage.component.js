@@ -2,11 +2,13 @@ import React,{ useState } from 'react';
 // import { TestPageProps } from './TestPage.propTypes'
 import { Card, CardTitle, CardText, CardDeck, CardSubtitle, CardBody } from 'reactstrap';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import { Form, FormGroup, Label, Input
+import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import Nav from '../../components/Nav/Nav.component';
+// import { Form, FormGroup, Label, Input
   // , FormText 
-} from 'reactstrap';
+// } from 'reactstrap';
 // import Modal from '../../components/Modal/Modal.component';
-import './style.css';
+import '../../../src/App.css';
 import DeleteBtn from '../../components/DeleteBtn';
 
 
@@ -22,9 +24,11 @@ const TestPage = (props) => {
   const toggle = () => setModal(!modal);
   
   return (
+    <div>
+      <Nav />
     <div responsive id="mainCardDiv">
       <CardDeck>
-        <Card>
+        <Card id="inventoryDiv">
           <CardBody>
             <CardTitle><h2>Inventory</h2></CardTitle>
             <CardSubtitle>List of Orders</CardSubtitle>
@@ -35,7 +39,7 @@ const TestPage = (props) => {
             <CardText>Item #4</CardText>
           </CardBody>
         </Card>
-        <Card>
+        <Card id="assemblyDiv">
           <CardBody>
             <CardTitle><h2>Assembly</h2></CardTitle>
             <CardSubtitle>List of Orders</CardSubtitle>
@@ -46,7 +50,7 @@ const TestPage = (props) => {
             <CardText>Item #4</CardText>
           </CardBody>
         </Card>
-        <Card>
+        <Card id="qcDiv">
           <CardBody>
             <CardTitle><h2>Quality Check</h2></CardTitle>
             <CardSubtitle>List of Orders</CardSubtitle>
@@ -57,7 +61,7 @@ const TestPage = (props) => {
             <CardText>Item #4</CardText>
           </CardBody>
         </Card>
-        <Card>
+        <Card id="completedDiv">
           <CardBody>
             <CardTitle><h2>Completed Orders</h2></CardTitle>
             <CardSubtitle>List of Orders</CardSubtitle>
@@ -70,8 +74,8 @@ const TestPage = (props) => {
         </Card>
       </CardDeck>
       <br></br>
-      <div id="cancelledDiv">
-      <Card>
+      <div>
+      <Card id="cancelledDiv">
           <CardBody>
             <CardTitle><h2>Cancelled Orders</h2></CardTitle>
             <CardSubtitle>List of Orders</CardSubtitle>
@@ -89,9 +93,15 @@ const TestPage = (props) => {
         <Modal isOpen={modal} toggle={toggle} className={className}>
           <ModalHeader toggle={toggle} id="modalHeader">Create A New Sales Order</ModalHeader>
           <ModalBody>
-            Please fill out this form.
+            {/* Please complete the form */}
             <Form id="modalForm">
               <FormGroup>
+                <Label for="exampleEmail">Sales Order Number:</Label>
+                <Input type="email" name="email" id="exampleEmail" placeholder="Please enter Sales Order Number" />
+              </FormGroup>
+              <FormGroup>
+                <Label for="examplePassword">Description:</Label>
+                <Input type="password" name="password" id="examplePassword" placeholder="Please enter a brief description of the order" />
                 <Label for="exampleClient">Client Name:</Label>
                 <Input type="text" name="clientName" id="exampleClient" placeholder="Please enter the Client" />
               </FormGroup>
@@ -123,13 +133,14 @@ const TestPage = (props) => {
             </Form>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={toggle}>Submit Order</Button>{' '}
-            <Button color="secondary" onClick={toggle}>Cancel</Button>
+            <Button onClick={toggle}>Submit Order</Button>{' '}
+            <Button onClick={toggle}>Cancel</Button>
           </ModalFooter>
         </Modal>
 
         <DeleteBtn />
       </div>
+    </div>
     </div>
   );
 };

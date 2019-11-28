@@ -38,10 +38,9 @@ div.imageDiv a:hover {
   font-size: 3rem;
   color: #183302;
   margin-left: 2rem;
-
 }
 
-ul {
+ul, #modalheader, #modalform {
   font-family: 'Blinker', sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
@@ -50,16 +49,17 @@ ul {
 
 }
 
-.submit, .cancel {
+.submit, .cancel, #modalButton {
   width: 10%;
   font-family: 'Blinker', sans-serif;
   background-color: #3c8005;
   border: #183302 4px solid;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
   text-align: center;
   padding: .5rem;
+  padding-bottom: 1rem;
   margin-top: 1rem;
   margin-left: 2rem;
   font-size: 2rem;
@@ -93,6 +93,12 @@ ul {
   font-weight: bold;
 }
 
+#modalButton:hover {
+  background-color: #dfecd3;
+  border: #183302 4px solid;
+  color: #3c8005;
+}
+
 table {
   font-family: 'Blinker', sans-serif;
   font-weight: bold;
@@ -102,6 +108,7 @@ table {
 }
 
 form {
+  font-family: 'Blinker', sans-serif;
   width: 82.5%;
   font-family: 'Blinker', sans-serif;
   font-weight: bold;
@@ -109,4 +116,62 @@ form {
   color: #183302;
   margin-left: 2rem;
   border: 3px solid #183302;
+}
+
+#mainCardDiv {
+  font-family: 'Blinker', sans-serif;
+  margin: 50px;
+  
+}
+
+h2 {
+  font-family: 'Blinker', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #183302;
+}
+
+#inventoryDiv, #assemblyDiv, #qcDiv, #completedDiv, #cancelledDiv {
+  font-family: 'Blinker', sans-serif;
+  /* display: flex;
+  align-content: center; */
+  border: #081101 4px solid;
+  border-radius: 10px;
+}
+
+#cancelledDiv {
+  margin-left: 600px;
+  margin-right: 600px;
+  /* font-family: 'Blinker', sans-serif; */
+  /* text-align: center; */
+}
+
+.delete-btn {
+  font-size: 1rem;
+  font-weight: bold;
+  /* float: right; */
+  width: 10%;
+  font-family: 'Blinker', sans-serif;
+  background-color: #e40e06;
+  border: #081101 4px solid;
+  border-radius: 10px;
+  text-align: center;
+  padding: .5rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
+  font-size: 2rem;
+  line-height: 1;
+  color: #eed7d7;
+  font-weight: bold;
+}
+
+.delete-btn:hover {
+  background-color: #eed7d7;
+  border: #e40e06 4px solid;
+  color: #e40e06;
+}
+
+#modalButton, .delete-btn {
+  display: flex;
+  align-items: center;
 }
