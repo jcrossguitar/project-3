@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactRouterDetailsPropTypes } from './ReactRouterDetails.propTypes';
-import styles from './ReactRouterDetails.styles.scss';
+// import styles from './ReactRouterDetails.styles.scss';
 
 export const ReactRouterDetails = props => {
   const objectTable = object => {

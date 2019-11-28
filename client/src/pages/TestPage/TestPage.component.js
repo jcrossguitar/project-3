@@ -4,6 +4,9 @@ import { Card, CardTitle, CardText, CardDeck, CardSubtitle, CardBody } from 'rea
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import Nav from '../../components/Nav/Nav.component';
+// import { Form, FormGroup, Label, Input
+  // , FormText 
+// } from 'reactstrap';
 // import Modal from '../../components/Modal/Modal.component';
 import '../../../src/App.css';
 import DeleteBtn from '../../components/DeleteBtn';
@@ -12,7 +15,7 @@ import DeleteBtn from '../../components/DeleteBtn';
 
 const TestPage = (props) => {
   const {
-    buttonLabel,
+    // buttonLabel,
     className
   } = props;
 
@@ -99,6 +102,24 @@ const TestPage = (props) => {
               <FormGroup>
                 <Label for="examplePassword">Description:</Label>
                 <Input type="password" name="password" id="examplePassword" placeholder="Please enter a brief description of the order" />
+                <Label for="exampleClient">Client Name:</Label>
+                <Input type="text" name="clientName" id="exampleClient" placeholder="Please enter the Client" />
+              </FormGroup>
+              <FormGroup>
+                <Label for="examplePOC">Point of Contact</Label>
+                <Input type="text" name="pointOfContact" id="examplePOC" placeholder="Please enter the point of contact" />
+              </FormGroup>
+              <FormGroup>
+                <Label for="exampleEmail">Email</Label>
+                <Input type="email" name="email" id="exampleEmail" placeholder="Please enter an email address" />
+              </FormGroup>
+              <FormGroup>
+                <Label for="examplePhone">Phone</Label>
+                <Input type="integer" name="phone" id="examplePhone" placeholder="Please enter a phone number" />
+              </FormGroup>
+              <FormGroup>
+                <Label for="exampleDesc"> Order Description:</Label>
+                <Input type="text" name="description" id="exampleDesc" placeholder="Please enter a brief description of the order" />
               </FormGroup>
               <FormGroup>
                 <Label for="exampleSelect">Choose a Department:</Label>
