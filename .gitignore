@@ -4,3 +4,4 @@ node_modules/
 .DS_Store
 .vscode/
 app.js
+client/src/auth_config.json
