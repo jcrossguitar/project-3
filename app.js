@@ -6,6 +6,7 @@ var logger = require('morgan');
 var cors = require('cors');
 var axios = require("axios");
 var mongoose = require("mongoose");
+var react = require("react");
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -32,7 +33,17 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/products");
+mongoose.Promise = global.Promise;
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://<user>:<password1>@ds349618.mlab.com:49618/heroku_n7p1d3bv",
+{
+  useMongoClient: true
+}
+);
+
+app.listen(PORT, function() {
+  console.log("==> API Server now listening on PORT ${PORT}!");
+});
 
 // error handler
 app.use(function(err, req, res, next) {
