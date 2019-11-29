@@ -7,6 +7,7 @@ var cors = require('cors');
 var axios = require("axios");
 var mongoose = require("mongoose");
 var react = require("react");
+var dotenv = require("dotenv").config();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -35,7 +36,7 @@ app.use(function(req, res, next) {
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://<user>:<password1>@ds349618.mlab.com:49618/heroku_n7p1d3bv",
+mongoose.connect(process.env.MONGODB_URI || PROCESS.ENV.DB_HEROKUCONNECT,
 {
   useMongoClient: true
 }
