@@ -3,3 +3,5 @@ node_modules/
 .idea/
 .DS_Store
 .vscode/
+app.js
+client/src/auth_config.json
