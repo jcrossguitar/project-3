@@ -8,11 +8,13 @@ var axios = require("axios");
 var mongoose = require("mongoose");
 var react = require("react");
 var dotenv = require("dotenv").config();
+var PORT = process.env.PORT || 3000;
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+
 app.use(cors())
 
 app.use(logger('dev'));
@@ -34,16 +36,18 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+require("./routes/index")(app);
+
 mongoose.Promise = global.Promise;
 
-mongoose.connect(process.env.MONGODB_URI || PROCESS.ENV.DB_HEROKUCONNECT,
+mongoose.connect(process.env.MONGODB_URI || process.env.DB_HEROKUCONNECT,
 {
   useMongoClient: true
 }
 );
 
 app.listen(PORT, function() {
-  console.log("==> API Server now listening on PORT ${PORT}!");
+  console.log(`==> API Server now listening on PORT ${PORT}!`);
 });
 
 // error handler
