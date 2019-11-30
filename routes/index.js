@@ -81,6 +81,23 @@ router.get('/example/:id', function(req, res, next) {
   });
 });
 
+
+router.get('/Profile', function(req, res, next) {
+  res.json({
+    app: "project_3",
+    health: 200,
+    name: "vieworder"
+  });
+});
+
+router.get('/PrivateRoute', function(req, res, next) {
+  res.json({
+    app: "project_3",
+    health: 200,
+    name: "vieworder"
+  });
+});
+
 router.get('/vieworder', function(req, res, next) {
   res.json({
     app: "project_3",
