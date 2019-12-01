@@ -40,7 +40,9 @@ require("./routes/index")(app);
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/products",
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds349618.mlab.com:49618/heroku_n7p1d3bv"
+  // "mongodb://localhost/products"
+  ,
 {
   useMongoClient: true
 }
