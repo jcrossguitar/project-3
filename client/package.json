@@ -42,7 +42,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000/",
+  "proxy": "http://localhost:5000",
   "devDependencies": {
     "@storybook/addon-actions": "^5.2.5",
     "@storybook/addon-links": "^5.2.5",
