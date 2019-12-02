@@ -13,6 +13,8 @@ var PORT = process.env.PORT || 3000;
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+
+
 var app = express();
 
 app.use(cors())
@@ -40,7 +42,7 @@ require("./routes/index")(app);
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds349618.mlab.com:49618/heroku_n7p1d3bv"
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds139934.mlab.com:39934/heroku_09wrn10w"
   // "mongodb://localhost/products"
   ,
 {
