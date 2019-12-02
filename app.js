@@ -23,10 +23,10 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'client/build')));
+//app.use(express.static(path.join(__dirname, 'client/build')));
 
 console.log('indexRouter')
-app.post('/api/test', (req, res) => res.json({ message: "hello", }))
+app.get('/api/test', (req, res) => res.json({ message: "hello", }))
 app.use('/api', indexRouter);
 app.use('/users', usersRouter);
 app.get('*', (req,res) =>{
@@ -38,8 +38,6 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-require("./routes/index")(app);
-
 mongoose.Promise = global.Promise;
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds139934.mlab.com:39934/heroku_09wrn10w"
@@ -49,6 +47,9 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds139934.m
   useMongoClient: true
 }
 );
+
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds349618.mlab.com:49618/heroku_n7p1d3bv", { useNewUrlParser: true});
+
 
 app.listen(PORT, function() {
   console.log(`==> API Server now listening on PORT ${PORT}!`);

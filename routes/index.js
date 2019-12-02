@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+const ViewOrder = require('../models/viewOrder');
 
 /* GET React app. */
 // router.get('/api/health', function(req, res, next) {
@@ -96,6 +96,11 @@ router.get('/PrivateRoute', function(req, res, next) {
     health: 200,
     name: "vieworder"
   });
+});
+
+router.post('/vieworder', function(req, res, next) {
+  console.log('req bodyyy', req.body)
+  ViewOrder.create(req.body).then(order => res.send(order)).catch(err => res.status(500).send(err));  
 });
 
 router.get('/vieworder', function(req, res, next) {

@@ -2,16 +2,34 @@ import React, {useState} from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 import DeleteBtn from '../DeleteBtn';
-
+import API from '../../utils/API'
+import axios from 'axios';
+const api = new API;
 
 const SauronModal = (props) => {
 	const {
 		className
 	} = props;
 
+	const [orderNumber, setOrderNumber] = useState('');
 	const [modal, setModal] = useState(false);
-
+	const [email, setEmail] = useState('');
+	const [description, setDescription] = useState('');
+	const [clientNumber, setClientNumber] = useState('');
+	const [clientName, setClientName] = useState('');
 	const toggle = () => setModal(!modal);
+
+	const createViewOrder = () => {
+		console.log('orderrr', orderNumber, 'DESCCC', description)
+		const order = {
+			clientName: '',
+			pointOfContact: '',
+			email: '',
+			phone: '',
+			orderRequest: '',
+		}
+		api.saveOrder(order).then(newOrder => console.log('sdasasaS', newOrder.data)).catch(err => console.log('caaaaaa', err));
+	}
 
 	return (
 		<div id="modalDiv">
@@ -23,14 +41,14 @@ const SauronModal = (props) => {
 					<Form id="modalForm">
 						<FormGroup>
 							<Label for="exampleEmail">Sales Order Number:</Label>
-							<Input type="email" name="email" id="exampleEmail" placeholder="Please enter Sales Order Number" />
+							<Input value={orderNumber} onChange={v => setOrderNumber(v.target.value)} name="orderNumber" id="orderNumber" placeholder="Please enter Sales Order Number" />
 						</FormGroup>
 
 						<FormGroup>
-							<Label for="examplePassword">Description:</Label>
-							<Input type="password" name="password" id="examplePassword" placeholder="Please enter a brief description of the order" />
+							<Label for="exampleDesc">Description:</Label>
+							<Input value={description} onChange={v => setDescription(v.target.value)} type="password" name="password" id="examplePassword" placeholder="Please enter a brief description of the order" />
 							<Label for="exampleClient">Client Name:</Label>
-							<Input type="text" name="clientName" id="exampleClient" placeholder="Please enter the Client" />
+							<Input value={clientName} setClientName={v => setClientName(v.target.value)} type="text" name="clientName" id="exampleClient" placeholder="Please enter the Client" />
 						</FormGroup>
 
 						<FormGroup>
@@ -66,7 +84,7 @@ const SauronModal = (props) => {
 				</ModalBody>
 
 				<ModalFooter>
-					<Button onClick={toggle}>Submit Order</Button>{' '}
+					<Button type="submit" onClick={createViewOrder}>Submit Order</Button>{' '}
 					<Button onClick={toggle}>Cancel</Button>
 				</ModalFooter>
 			</Modal>
