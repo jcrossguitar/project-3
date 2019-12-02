@@ -7,6 +7,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
+import "../../../src/App.css";
 
 const columns = [
   { id: 'ordernumber', label: 'Order Number', align: 'left', minWidth: 50 },
@@ -117,7 +118,7 @@ export default function StickyHeadTable() {
         </Table>
       </div>
       <TablePagination
-        rowsPerPageOptions={[10, 25, 100]}
+        rowsPerPageOptions={[3, 10, 25, 100]}
         component="div"
         count={rows.length}
         rowsPerPage={rowsPerPage}

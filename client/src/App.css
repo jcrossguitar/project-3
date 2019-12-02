@@ -137,17 +137,22 @@ h2 {
   align-content: center; */
   border: #081101 4px solid;
   border-radius: 10px;
+  margin: 2rem;
+  height: 30%;
 }
 
 #cancelledDiv {
-  margin-left: 600px;
-  margin-right: 600px;
+  display: flex;
+  align-content: flex-start;
+  width: 50%;
+  margin-top: -4rem;
+  margin-left: 500px;
+  margin-right: 550px;
   /* font-family: 'Blinker', sans-serif; */
-  /* text-align: center; */
 }
 
-.delete-btn {
-  font-size: 1rem;
+.deleteOrder {
+  font-size: 2rem;
   font-weight: bold;
   /* float: right; */
   width: 10%;
@@ -155,23 +160,22 @@ h2 {
   background-color: #e40e06;
   border: #081101 4px solid;
   border-radius: 10px;
-  text-align: center;
+  display: flex;
   padding: .5rem;
   margin-top: 1rem;
   margin-left: 2rem;
+  margin-bottom: 4rem;
   font-size: 2rem;
   line-height: 1;
   color: #eed7d7;
   font-weight: bold;
+  text-align: center;
+  padding: .5rem;
+  padding-bottom: 1rem;
 }
 
 .delete-btn:hover {
   background-color: #eed7d7;
   border: #e40e06 4px solid;
   color: #e40e06;
-}
-
-#modalButton, .delete-btn {
-  display: flex;
-  align-items: center;
 }
