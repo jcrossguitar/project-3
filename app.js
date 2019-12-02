@@ -13,6 +13,8 @@ var PORT = process.env.PORT || 3000;
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
+
+
 var app = express();
 
 app.use(cors())
@@ -37,7 +39,17 @@ app.use(function(req, res, next) {
 });
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds349618.mlab.com:49618/heroku_n7p1d3bv", { useNewUrlParser: true});
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds139934.mlab.com:39934/heroku_09wrn10w"
+  // "mongodb://localhost/products"
+  ,
+{
+  useMongoClient: true
+}
+);
+
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds349618.mlab.com:49618/heroku_n7p1d3bv", { useNewUrlParser: true});
+
 
 app.listen(PORT, function() {
   console.log(`==> API Server now listening on PORT ${PORT}!`);
