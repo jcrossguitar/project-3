@@ -14,21 +14,24 @@ const SauronModal = (props) => {
 	const [orderNumber, setOrderNumber] = useState('');
 	const [modal, setModal] = useState(false);
 	const [email, setEmail] = useState('');
+	const [phone, setPhone] = useState('');
 	const [description, setDescription] = useState('');
-	const [clientNumber, setClientNumber] = useState('');
+	const [pointOfContact, setPointOfContact] = useState('');
 	const [clientName, setClientName] = useState('');
 	const toggle = () => setModal(!modal);
 
 	const createViewOrder = () => {
 		console.log('orderrr', orderNumber, 'DESCCC', description)
 		const order = {
-			clientName: '',
-			pointOfContact: '',
-			email: '',
-			phone: '',
-			orderRequest: '',
+			//description: '',
+			clientName,
+			pointOfContact,
+			email,
+			phone,
+			orderRequest: 'fake value'
 		}
 		api.saveOrder(order).then(newOrder => console.log('sdasasaS', newOrder.data)).catch(err => console.log('caaaaaa', err));
+		
 	}
 
 	return (
@@ -48,22 +51,22 @@ const SauronModal = (props) => {
 							<Label for="exampleDesc">Description:</Label>
 							<Input value={description} onChange={v => setDescription(v.target.value)} type="password" name="password" id="examplePassword" placeholder="Please enter a brief description of the order" />
 							<Label for="exampleClient">Client Name:</Label>
-							<Input value={clientName} setClientName={v => setClientName(v.target.value)} type="text" name="clientName" id="exampleClient" placeholder="Please enter the Client" />
+							<Input value={clientName} onChange={v => setClientName(v.target.value)} type="text" name="clientName" id="exampleClient" placeholder="Please enter the Client" />
 						</FormGroup>
 
 						<FormGroup>
 							<Label for="examplePOC">Point of Contact</Label>
-							<Input type="text" name="pointOfContact" id="examplePOC" placeholder="Please enter the point of contact" />
+							<Input value={pointOfContact} onChange={v => setPointOfContact(v.target.value)} type="text" name="pointOfContact" id="examplePOC" placeholder="Please enter the point of contact" />
 						</FormGroup>
 
 						<FormGroup>
 							<Label for="exampleEmail">Email</Label>
-							<Input type="email" name="email" id="exampleEmail" placeholder="Please enter an email address" />
+							<Input value={email} onChange={v => setEmail(v.target.value)}type="email" name="email" id="exampleEmail" placeholder="Please enter an email address" />
 						</FormGroup>
 
 						<FormGroup>
 							<Label for="examplePhone">Phone</Label>
-							<Input type="integer" name="phone" id="examplePhone" placeholder="Please enter a phone number" />
+							<Input value={phone} onChange={v => setPhone(v.target.value)}type="integer" name="phone" id="examplePhone" placeholder="Please enter a phone number" />
 						</FormGroup>
 
 						<FormGroup>

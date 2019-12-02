@@ -8,7 +8,7 @@ var axios = require("axios");
 var mongoose = require("mongoose");
 var react = require("react");
 var dotenv = require("dotenv").config();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 5000;
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -51,10 +51,6 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds139934.m
 // mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds349618.mlab.com:49618/heroku_n7p1d3bv", { useNewUrlParser: true});
 
 
-app.listen(PORT, function() {
-  console.log(`==> API Server now listening on PORT ${PORT}!`);
-});
-
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
@@ -69,4 +65,6 @@ app.use(function(err, req, res, next) {
   });
 });
 
-module.exports = app;
+app.listen(PORT, function() {
+  console.log(`==> API Server now listening on PORT ${PORT}!`);
+});
