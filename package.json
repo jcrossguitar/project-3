@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "start": "npm run start:prod",
-    "start:dev:react": "cd ./client && npm i && npm start && cd ..",
-    "start:dev:node": "npm i && node ./bin/www",
+    "start:dev:react": "cd ./client && npm start && cd ..",
+    "start:dev:node": "nodemon app.js",
     "start:prod": "npm run start:prod:react && npm run start:prod:node",
     "start:prod:react": "cd ./client && npm i && npm run build && cd ..",
     "start:prod:node": "npm i && node ./bin/www"
@@ -31,5 +31,5 @@
     "react-scripts": "^3.2.0",
     "reactstrap": "^8.1.1"
   },
-  "proxy": "http://localhost:3000/"
+  "proxy": "http://localhost:3000"
 }
