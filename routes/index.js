@@ -99,7 +99,7 @@ router.get('/PrivateRoute', function(req, res, next) {
 });
 
 router.post('/vieworder', function(req, res, next) {
-  console.log('req bodyyy', req.body)
+  console.log('req bodyyy', req.body);
   ViewOrder.create(req.body).then(order => res.send(order)).catch(err => res.status(500).send(err));  
 });
 
