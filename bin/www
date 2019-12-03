@@ -21,6 +21,7 @@ async function main() {
     });
     // Start Server
     var port = normalizePort(process.env.PORT || '5000');
+    console.log('************* RUNNING ON PORT: ', port);
     app.set('port', port);
     var server = http.createServer(app);
     server.listen(port);
