@@ -3,7 +3,7 @@ html, body, #root, #root>div {
   background-color: #bfee14;
 }
 
-.imageDiv {
+.loginDiv {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,11 +16,26 @@ html, body, #root, #root>div {
   font-size: 10rem;
   color: #3c8005;
   margin-top: -8rem;
-  margin-left: -2rem;
+  margin-left: .6rem;
 }
 
 div.imageDiv a:hover {
   text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: #bfee14;
+}
+
+.logout {
+  font-family: 'Blinker', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #183302;
+  margin-top: -38rem;
+  margin-right: -105rem;
+  margin-bottom: -19rem;
 }
 
 .heading {
@@ -80,7 +95,7 @@ ul, #modalheader, #modalform {
   background-color: #183302;
   font-size: 1.5rem;
   color: #bfee14;
-  margin-top: 1rem;
+  margin-top: -8rem;
 }
 
 .navbar-icon {
@@ -154,7 +169,6 @@ h2 {
 .deleteOrder {
   font-size: 2rem;
   font-weight: bold;
-  /* float: right; */
   width: 10%;
   font-family: 'Blinker', sans-serif;
   background-color: #e40e06;
@@ -170,12 +184,24 @@ h2 {
   color: #eed7d7;
   font-weight: bold;
   text-align: center;
+  /* align-content: center; */
   padding: .5rem;
   padding-bottom: 1rem;
 }
 
-.delete-btn:hover {
+.deleteOrder:hover {
   background-color: #eed7d7;
   border: #e40e06 4px solid;
   color: #e40e06;
+}
+
+.profileDiv {
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+
+.userPic {
+  margin-bottom: 1.5rem;
+  border: #183302 5px solid;
+  border-radius: 12px;
 }

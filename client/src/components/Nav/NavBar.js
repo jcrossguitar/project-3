@@ -1,6 +1,4 @@
 import React from "react";
-
-
 import { useAuth0 } from "../../react-auth0-spa";
 
 const NavBar = () => {
@@ -8,18 +6,19 @@ const NavBar = () => {
 
   return (
     
-    <div>
+    <div className="loginDiv">
       {!isAuthenticated && (
         <button
           onClick={() =>
             loginWithRedirect({})
           }
         >
-          Log in
+        <img src="/image/Eye.png" alt="all-seeing eye" width="400" ></img>
+				<h1 className="title">sauron</h1>
         </button>
       )}
 
-      {isAuthenticated && <button onClick={() => logout()}>Log out</button>}
+      {isAuthenticated && <button className="logout" onClick={() => logout()}>logout</button>}
 
        {/* {  }
       {isAuthenticated && (
