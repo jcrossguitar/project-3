@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "npm run start:prod",
+    "start": "npm run start:prod:node",
     "start:dev:react": "cd ./client && npm start && cd ..",
     "start:dev:node": "nodemon app.js",
     "start:prod": "npm run start:prod:react && npm run start:prod:node",
