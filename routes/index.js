@@ -3,14 +3,14 @@ var router = express.Router();
 const ViewOrder = require('../models/viewOrder');
 
 /* GET React app. */
-// router.get('/api/health', function(req, res, next) {
-//   res.json({
-//     app: "project_3",
-//     health: 200
-//   });
-// });
+router.get('/health', function(req, res, next) {
+  res.json({
+    app: "project_3",
+    health: 200
+  });
+});
 
-router.get('/api/login', function(req, res, next) {
+router.get('/login', function(req, res, next) {
   res.json({
     app: "project_3",
     health: 200,
@@ -18,7 +18,7 @@ router.get('/api/login', function(req, res, next) {
   });
 });
 
-router.get('/api/sales', function(req, res, next) {
+router.get('/sales', function(req, res, next) {
   res.json({
     app: "project_3",
     health: 200,
