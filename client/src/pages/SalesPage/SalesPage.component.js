@@ -2,7 +2,6 @@ import React from 'react';
 import { SalesPageProps } from './SalesPage.propTypes'
 // import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRouterDetails.component';
 import '../../../src/App.css';
-import Nav from '../../components/Nav/Nav.component';
 import ToggleSwitch from "../../components/Toggle/Toggle.component";
 
 
@@ -23,7 +22,6 @@ export class SalesPage extends React.Component {
   render() {
     return (
       <div>
-        <Nav />
         <h1 className="heading">sales</h1>
         <h3 className="subheading">IN PROGRESS:</h3>
         <ul>

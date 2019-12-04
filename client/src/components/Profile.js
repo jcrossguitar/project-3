@@ -2,7 +2,6 @@
 
 import React, { Fragment } from "react";
 import { useAuth0 } from "../react-auth0-spa";
-import Nav from './Nav/Nav.component';
 import '../../src/App.css';
 import MainCard from './MainCard/MainCard.component';
 import CancelledCard from './CancelledCard/CancelledCard.component';
@@ -18,7 +17,6 @@ const Profile = () => {
   return (
     <Fragment>
       <div>
-        <Nav />
         <div className="profileDiv">
           <img className="userPic" src={user.picture} alt="Profile" />
 

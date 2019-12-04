@@ -2,7 +2,7 @@ import React from 'react';
 import { ViewOrderPageProps } from './ViewOrderPage.propTypes'
 // import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRouterDetails.component';
 import '../../../src/App.css';
-import Nav from '../../components/Nav/Nav.component';
+
 export class ViewOrderPage extends React.Component {
   constructor(props) {
     super(props);
@@ -20,7 +20,6 @@ export class ViewOrderPage extends React.Component {
   render() {
     return (
       <div>
-        <Nav />
         <h1 className="heading">orders</h1>
       </div>
     );

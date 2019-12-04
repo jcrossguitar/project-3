@@ -43,7 +43,8 @@ button {
   font-weight: bold;
   font-size: 4rem;
   color: #3c8005;
-  margin: 2rem;
+  margin-left: 2rem;
+  margin-top: -4rem;
 
 }
 
@@ -52,16 +53,14 @@ button {
   font-weight: bold;
   font-size: 3rem;
   color: #183302;
-  margin-left: 2rem;
+  margin-left: 3rem;
 }
 
 ul, #modalheader, #modalform {
   font-family: 'Blinker', sans-serif;
-  font-weight: bold;
   font-size: 1.5rem;
   color: #183302;
-  margin-left: 2rem;
-
+  margin-left: 3rem;
 }
 
 .submit, .cancel, #modalButton {
@@ -90,12 +89,14 @@ ul, #modalheader, #modalform {
 }
 
 .navbar {
+  width: 100%;
   font-family: 'Blinker', sans-serif;
   font-weight: bold;
   background-color: #183302;
   font-size: 1.5rem;
   color: #bfee14;
-  margin-top: -8rem;
+  margin-top: -10.5rem;
+  margin-bottom: 3rem;
 }
 
 .navbar-icon {
@@ -114,11 +115,21 @@ ul, #modalheader, #modalform {
   color: #3c8005;
 }
 
-table {
+th {
   font-family: 'Blinker', sans-serif;
-  font-weight: bold;
+  font-size: 2rem;
+  color: #183302;
+  margin-left: 4rem;
+}
+
+td {
+  font-family: 'Blinker', sans-serif;
   font-size: 1.5rem;
   color: #183302;
+  margin-left: 4rem;
+}
+
+table {
   margin-left: 4rem;
 }
 
@@ -155,6 +166,10 @@ h2 {
   margin-left: 3rem;
   margin-top: 2rem;
   height: 30%;
+}
+
+#inventoryDiv, #assemblyDiv {
+  margin-top: 1rem;
 }
 
 #cancelledDiv {
@@ -197,7 +212,7 @@ h2 {
 }
 
 .profileDiv {
-  margin-top: 3rem;
+  margin-top: -2rem;
   margin-left: 3rem;
 }
 
