@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-
+import Nav from "./components/Nav/Nav.component";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useAuth0 } from "./react-auth0-spa";
 import { Home } from './components/Home/Home.component';
@@ -34,27 +34,32 @@ function App() {
   }
   return (
       <div className="App">
+
         <LoginNav />
-        <Router history={history}>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <PrivateRoute path="/Profile" component={Profile} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/inventory" component={InventoryPage} />
-            <Route exact path="/assembly" component={AssemblyPage} />
-            <Route exact path="/example/" component={ExamplePage} />
-            <Route exact path="/sales" component={SalesPage} />
-            <Route exact path="/Qc" component={QcPage} />
-            <Route exact path="/form" component={FormPage} />
-            <Route exact path="/vieworder" component={ViewOrderPage} />
-            <Route exact path="/shipping" component={ShippingPage} />
-            {/* <Route exact path="/cheese/:id" component={CheeseDetail} /> */}
-            <Route exact path="/test" component={TestPage} />
-            <Route exact path="/vieworder/:id" component={ViewOrderDetail} />
-            <Route exact path="/example/:id" component={ExamplePage} />
-            <Route component={NoMatch} />
-          </Switch>
-        </Router>
+
+          
+        <Nav />
+          
+            <Router history={history}>
+              <Switch>
+                <Route exact path="/" component={Home} />
+                <PrivateRoute path="/Profile" component={Profile} />
+                <Route exact path="/about" component={About} />
+                <Route exact path="/inventory" component={InventoryPage} />
+                <Route exact path="/assembly" component={AssemblyPage} />
+                <Route exact path="/example/" component={ExamplePage} />
+                <Route exact path="/sales" component={SalesPage} />
+                <Route exact path="/Qc" component={QcPage} />
+                <Route exact path="/form" component={FormPage} />
+                <Route exact path="/vieworder" component={ViewOrderPage} />
+                <Route exact path="/shipping" component={ShippingPage} />
+                {/* <Route exact path="/cheese/:id" component={CheeseDetail} /> */}
+                <PrivateRoute path="/test" component={TestPage} />
+                <Route exact path="/vieworder/:id" component={ViewOrderDetail} />
+                <Route exact path="/example/:id" component={ExamplePage} />
+                <Route component={NoMatch} />
+              </Switch>
+            </Router>
           </div>
 
 );

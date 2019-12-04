@@ -1,12 +1,13 @@
-// import React from 'react';
-// import LoginNav from '../../components/Nav/LoginNav';
+import React from 'react';
+import LoginNav from '../Nav/LoginNav.component';
 
 
-// export const Home = () => {
+export const Home = () => {
 	
-// 	return (
-// 		<div className="imageDiv">
-// 			<LoginNav />
-// 		</div>
-// 	);
-// };
+	return (
+        
+		<div className="imageDiv">
+			<LoginNav />
+		</div>
+	);
+};
