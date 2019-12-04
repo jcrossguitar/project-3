@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const ViewOrder = require('../models/viewOrder');
+// const ViewOrder = require('../models/viewOrder');
+let db = require('./../models');
 
 /* GET React app. */
 router.get('/api/health', function(req, res, next) {
@@ -27,11 +28,11 @@ router.get('/api/sales', function(req, res, next) {
 });
 
 router.get('/inventory', function(req, res, next) {
-  res.json({
-    app: "project_3",
-    health: 200,
-    name: "inventory"
-  });
+  db.viewOrder.find().then((data,err)=>{
+    console.log(data)
+    console.log(err)
+    res.json(data)
+  })
 });
 
 router.post('/inventory', function(req, res, next) {
@@ -100,7 +101,7 @@ router.get('/PrivateRoute', function(req, res, next) {
 
 router.post('/vieworder', function(req, res, next) {
   console.log('req bodyyy', req.body);
-  ViewOrder.create(req.body).then(order => res.send(order)).catch(err => res.status(500).send(err));  
+  db.viewOrder.create(req.body).then(order => res.send(order)).catch(err => res.status(500).send(err));  
 });
 
 router.get('/vieworder', function(req, res, next) {

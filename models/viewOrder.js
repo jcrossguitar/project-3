@@ -6,7 +6,7 @@ const viewOrderSchema = new Schema({
   pointOfContact: { type: String, required: true },
   email: { type: String, required: true },
   phone: { type: String, required: true },
-  orderRequest: { type: [String], required: true },
+  orderRequest: { type: String, required: true },
   date: { type: Date, default: Date.now}
 });
 
