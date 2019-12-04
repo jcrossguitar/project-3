@@ -5,8 +5,8 @@ import DeleteBtn from '../DeleteBtn';
 
 import API from '../../utils/API';
 
-import API from '../../utils/API'
-import axios from 'axios';
+// import API from '../../utils/API'
+// import axios from 'axios';
 // const api = new API();
 
 const SauronModal = (props) => {
