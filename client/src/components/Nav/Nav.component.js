@@ -7,13 +7,13 @@ class Nav extends React.Component {
     <nav className="navbar navbar-expand-lg navbar-dark">
       <img className="navbar-icon" src="/image/Eye3.png" alt="all-seeing eye" width="50"></img>
       <a className="navbar-brand" id="navItem" href="/">
-        Home
+        home
       </a>
       <a className="navbar-brand" id="navItem" href="/test">
-        Dashboard
+        dashboard
       </a>
       <a className="navbar-brand" id="navItem" href="/profile">
-        Profile
+        profile
       </a>
       {/* <a className="navbar-brand" id="navItem" href="/vieworder">
         view orders
