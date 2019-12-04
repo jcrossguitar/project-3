@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, CardTitle, CardText, CardDeck, CardSubtitle, CardBody } from 'reactstrap';
 import DenseTable from '../../components/CardTable/NewCardTable.component';
+import '../../../src/App.css';
+
 
 
 // export const MainCard = (props) => {

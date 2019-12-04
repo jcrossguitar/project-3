@@ -6,8 +6,8 @@ import '../../../src/App.css';
 function DeleteBtn(props) {
   return (
     <span {...props} role="button" tabIndex="0">
-      <button className="delete-btn">
-      ✗
+      <button className="deleteOrder">
+      ✗ Delete
       </button>
     </span>
   );

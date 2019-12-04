@@ -5,3 +5,5 @@ node_modules/
 .vscode/
 app.js
 client/src/auth_config.json
+client/node_modules
+client/build/

@@ -3,10 +3,9 @@ import './App.css';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { useAuth0 } from "./react-auth0-spa";
-import NavBar from "./components/Nav/NavBar";
 import { Home } from './components/Home/Home.component';
 import { About } from './components/About/About.component';
-import { CheeseDetail } from './pages/CheeseDetail/CheeseDetail.component';
+// import { CheeseDetail } from './pages/CheeseDetail/CheeseDetail.component';
 import { InventoryPage } from './pages/InventoryPage/InventoryPage.component';
 import { ViewOrderPage } from './pages/ViewOrderPage/ViewOrderPage.component';
 import { ViewOrderDetail } from './pages/ViewOrderDetail/ViewOrderDetail.component';
@@ -22,7 +21,7 @@ import { NoMatch } from './components/NoMatch';
 import Profile from "./components/Profile";
 import history from "./utils/history";
 import PrivateRoute from "./components/PrivateRoute";
-
+import LoginNav from './components/Nav/LoginNav.component';
 
 function App() {
 
@@ -35,8 +34,7 @@ function App() {
   }
   return (
       <div className="App">
-        <NavBar />
-    
+        <LoginNav />
         <Router history={history}>
           <Switch>
             <Route exact path="/" component={Home} />
@@ -50,7 +48,7 @@ function App() {
             <Route exact path="/form" component={FormPage} />
             <Route exact path="/vieworder" component={ViewOrderPage} />
             <Route exact path="/shipping" component={ShippingPage} />
-            <Route exact path="/cheese/:id" component={CheeseDetail} />
+            {/* <Route exact path="/cheese/:id" component={CheeseDetail} /> */}
             <Route exact path="/test" component={TestPage} />
             <Route exact path="/vieworder/:id" component={ViewOrderDetail} />
             <Route exact path="/example/:id" component={ExamplePage} />
@@ -58,6 +56,7 @@ function App() {
           </Switch>
         </Router>
           </div>
+
 );
 }
 

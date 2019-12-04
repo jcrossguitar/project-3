@@ -5,13 +5,13 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
 var axios = require("axios");
-var mongoose = require("mongoose");
 var react = require("react");
 var dotenv = require("dotenv").config();
 var PORT = process.env.PORT || 5000;
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+
+
 
 var app = express();
 
@@ -21,12 +21,8 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-//app.use(express.static(path.join(__dirname, 'client/build')));
-
-console.log('indexRouter')
-app.get('/api/test', (req, res) => res.json({ message: "hello", }))
+app.use(express.static(path.join(__dirname, 'client/build')));
 app.use('/api', indexRouter);
-app.use('/users', usersRouter);
 app.get('*', (req,res) =>{
   res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
@@ -36,8 +32,6 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || "mongodb://user:password1@ds349618.mlab.com:49618/heroku_n7p1d3bv", { useNewUrlParser: true});
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -53,6 +47,4 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.listen(PORT, function() {
-  console.log(`==> API Server now listening on PORT ${PORT}!`);
-});
+module.exports = app;

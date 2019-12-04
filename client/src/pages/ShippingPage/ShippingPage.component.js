@@ -2,7 +2,6 @@ import React from 'react';
 import { ShippingPageProps } from './ShippingPage.propTypes'
 // import { ReactRouterDetails } from '../../components/ReactRouterDetails/ReactRouterDetails.component';
 import '../../../src/App.css';
-import Nav from '../../components/Nav/Nav.component';
 
 export class ShippingPage extends React.Component {
   constructor(props) {
@@ -21,7 +20,6 @@ export class ShippingPage extends React.Component {
   render() {
     return (
       <div>
-        <Nav />
         <h1 className="heading">shipping</h1>
       </div>
     );

@@ -9,6 +9,8 @@ import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import API from './../../utils/API';
 
+import "../../../src/App.css";
+
 const columns = [
   { id: 'clientName', label: 'Client Name', align: 'left', minWidth: 50 },
   { id: 'date', label: 'Date Created', align: 'left', minWidth: 100 },
@@ -102,7 +104,7 @@ API.getInventory().then(data=>{
         </Table>
       </div>
       <TablePagination
-        rowsPerPageOptions={[10, 25, 100]}
+        rowsPerPageOptions={[3, 10, 25, 100]}
         component="div"
         count={inventory.length}
         rowsPerPage={rowsPerPage}

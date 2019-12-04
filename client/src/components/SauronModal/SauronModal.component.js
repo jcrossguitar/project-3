@@ -2,7 +2,12 @@ import React, {useState} from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 import DeleteBtn from '../DeleteBtn';
+
 import API from '../../utils/API';
+
+import API from '../../utils/API'
+import axios from 'axios';
+// const api = new API();
 
 const SauronModal = (props) => {
 	const {
@@ -29,6 +34,7 @@ const SauronModal = (props) => {
 			orderRequest: 'fake value'
 		}
 		API.saveOrder(order).then(newOrder => console.log('sdasasaS', newOrder.data)).catch(err => console.log('caaaaaa', err));
+
 		
 	}
 
