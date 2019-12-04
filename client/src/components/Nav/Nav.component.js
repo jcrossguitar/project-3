@@ -9,24 +9,27 @@ class Nav extends React.Component {
       <a className="navbar-brand" id="navItem" href="/">
         login/logout
       </a>
-      <a className="navbar-brand" id="navItem" href="/sales">
-        sales
+      <a className="navbar-brand" id="navItem" href="/test">
+        test
       </a>
-      <a className="navbar-brand" id="navItem" href="/vieworder">
+      <a className="navbar-brand" id="navItem" href="/profile">
+        profile
+      </a>
+      {/* <a className="navbar-brand" id="navItem" href="/vieworder">
         view orders
-      </a>
-      <a className="navbar-brand" id="navItem" href="/inventory">
+      </a> */}
+      {/* <a className="navbar-brand" id="navItem" href="/inventory">
         inventory
-      </a>
-      <a className="navbar-brand" id="navItem" href="/assembly">
+      </a> */}
+      {/* <a className="navbar-brand" id="navItem" href="/assembly">
         assembly
-      </a>
-      <a className="navbar-brand" id="navItem" href="/qc">
+      </a> */}
+      {/* <a className="navbar-brand" id="navItem" href="/qc">
         quality control
-      </a>
-      <a className="navbar-brand" id="navItem" href="/shipping">
+      </a> */}
+      {/* <a className="navbar-brand" id="navItem" href="/shipping">
         shipping
-      </a>
+      </a> */}
     </nav>
   );
 }
