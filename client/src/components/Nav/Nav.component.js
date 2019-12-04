@@ -10,10 +10,10 @@ class Nav extends React.Component {
         login/logout
       </a>
       <a className="navbar-brand" id="navItem" href="/test">
-        test
+        Dashboard
       </a>
       <a className="navbar-brand" id="navItem" href="/profile">
-        profile
+        Profile
       </a>
       {/* <a className="navbar-brand" id="navItem" href="/vieworder">
         view orders
