@@ -2,6 +2,9 @@ import React, {useState} from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Form, FormGroup, Label, Input } from 'reactstrap';
 import DeleteBtn from '../DeleteBtn';
+
+import API from '../../utils/API';
+
 import API from '../../utils/API'
 import axios from 'axios';
 // const api = new API();
@@ -30,7 +33,8 @@ const SauronModal = (props) => {
 			phone,
 			orderRequest: 'fake value'
 		}
-		// api.saveOrder(order).then(newOrder => console.log('sdasasaS', newOrder.data)).catch(err => console.log('caaaaaa', err));
+		API.saveOrder(order).then(newOrder => console.log('sdasasaS', newOrder.data)).catch(err => console.log('caaaaaa', err));
+
 		
 	}
 
@@ -49,7 +53,7 @@ const SauronModal = (props) => {
 
 						<FormGroup>
 							<Label for="exampleDesc">Description:</Label>
-							<Input value={description} onChange={v => setDescription(v.target.value)} type="password" name="password" id="examplePassword" placeholder="Please enter a brief description of the order" />
+							<Input value={description} onChange={v => setDescription(v.target.value)} type="text" name="description" id="exampleDescription" placeholder="Please enter a brief description of the order" />
 							<Label for="exampleClient">Client Name:</Label>
 							<Input value={clientName} onChange={v => setClientName(v.target.value)} type="text" name="clientName" id="exampleClient" placeholder="Please enter the Client" />
 						</FormGroup>
