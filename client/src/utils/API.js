@@ -1,26 +1,24 @@
-import axios from "axios";
+import axios from 'axios';
 
-export default 
-// class API 
-{
+export default class API {
 	// static getCheeseById(cheeseId) {
 	// 	console.log('getCheeseById(cheeseId)', cheeseId);
 	// 	return axios.get(`/api/cheese/${cheeseId}`);
 	// },
 
-	getOrders: function() {
-		return axios.get("/api/products");
-	},
+	getOrders() {
+		return axios.get("/api/vieworders");
+	}
 
-	getOrder: function(id) {
-		return axios.get("/api/products/" + id);
-	},
+	getOrderById (viewOrderId) {
+		return axios.get("/api/vieworder/");
+	}
 
-	deleteOrder: function(id) {
-		return axios.delete("/api/products/" + id);
-	},
+	deleteOrderById (viewOrderId) {
+		return axios.delete("/api/vieworder/");
+	}
 
-	saveOrder: function(orderData) {
-		return axios.post("/api/products", orderData);
+	saveOrder (orderData) {
+		return axios.post("/api/vieworder", orderData);
 	}
 };
