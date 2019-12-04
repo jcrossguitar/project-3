@@ -4,7 +4,7 @@ import { Form, FormGroup, Label, Input } from 'reactstrap';
 import DeleteBtn from '../DeleteBtn';
 import API from '../../utils/API'
 import axios from 'axios';
-const api = new API;
+// const api = new API();
 
 const SauronModal = (props) => {
 	const {
@@ -30,7 +30,7 @@ const SauronModal = (props) => {
 			phone,
 			orderRequest: 'fake value'
 		}
-		api.saveOrder(order).then(newOrder => console.log('sdasasaS', newOrder.data)).catch(err => console.log('caaaaaa', err));
+		// api.saveOrder(order).then(newOrder => console.log('sdasasaS', newOrder.data)).catch(err => console.log('caaaaaa', err));
 		
 	}
 

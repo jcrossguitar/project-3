@@ -1,7 +1,6 @@
 import React from 'react';
 import { AssemblyPageProps } from './AssemblyPage.propTypes'
 import '../../../src/App.css';
-import Nav from '../../components/Nav/Nav.component';
 import ToggleSwitch from '../../components/Toggle/Toggle.component';
 
 
@@ -22,7 +21,6 @@ export class AssemblyPage extends React.Component {
   render() {
     return (
       <div>
-        <Nav />
         <h1 className="heading">assembly</h1>
         <h3 className="subheading">IN PROGRESS:</h3>
         <ul>

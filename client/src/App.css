@@ -3,7 +3,7 @@ html, body, #root, #root>div {
   background-color: #bfee14;
 }
 
-.imageDiv {
+.loginDiv {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,11 +16,26 @@ html, body, #root, #root>div {
   font-size: 10rem;
   color: #3c8005;
   margin-top: -8rem;
-  margin-left: -2rem;
+  margin-left: .6rem;
 }
 
 div.imageDiv a:hover {
   text-decoration: none;
+}
+
+button {
+  border: none;
+  background-color: #bfee14;
+}
+
+.logout {
+  font-family: 'Blinker', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #183302;
+  margin-top: -38rem;
+  margin-right: -105rem;
+  margin-bottom: -19rem;
 }
 
 .heading {
@@ -28,7 +43,8 @@ div.imageDiv a:hover {
   font-weight: bold;
   font-size: 4rem;
   color: #3c8005;
-  margin: 2rem;
+  margin-left: 2rem;
+  margin-top: -4rem;
 
 }
 
@@ -37,16 +53,14 @@ div.imageDiv a:hover {
   font-weight: bold;
   font-size: 3rem;
   color: #183302;
-  margin-left: 2rem;
+  margin-left: 3rem;
 }
 
 ul, #modalheader, #modalform {
   font-family: 'Blinker', sans-serif;
-  font-weight: bold;
   font-size: 1.5rem;
   color: #183302;
-  margin-left: 2rem;
-
+  margin-left: 3rem;
 }
 
 .submit, .cancel, #modalButton {
@@ -61,7 +75,7 @@ ul, #modalheader, #modalform {
   padding: .5rem;
   padding-bottom: 1rem;
   margin-top: 1rem;
-  margin-left: 2rem;
+  margin-left: 3rem;
   font-size: 2rem;
   line-height: 1;
   color: #dfecd3;
@@ -75,12 +89,14 @@ ul, #modalheader, #modalform {
 }
 
 .navbar {
+  width: 100%;
   font-family: 'Blinker', sans-serif;
   font-weight: bold;
   background-color: #183302;
   font-size: 1.5rem;
   color: #bfee14;
-  margin-top: 1rem;
+  margin-top: -10.5rem;
+  margin-bottom: 3rem;
 }
 
 .navbar-icon {
@@ -99,11 +115,21 @@ ul, #modalheader, #modalform {
   color: #3c8005;
 }
 
-table {
+th {
   font-family: 'Blinker', sans-serif;
-  font-weight: bold;
+  font-size: 2rem;
+  color: #183302;
+  margin-left: 4rem;
+}
+
+td {
+  font-family: 'Blinker', sans-serif;
   font-size: 1.5rem;
   color: #183302;
+  margin-left: 4rem;
+}
+
+table {
   margin-left: 4rem;
 }
 
@@ -137,8 +163,13 @@ h2 {
   align-content: center; */
   border: #081101 4px solid;
   border-radius: 10px;
-  margin: 2rem;
+  margin-left: 3rem;
+  margin-top: 2rem;
   height: 30%;
+}
+
+#inventoryDiv, #assemblyDiv {
+  margin-top: 1rem;
 }
 
 #cancelledDiv {
@@ -154,7 +185,6 @@ h2 {
 .deleteOrder {
   font-size: 2rem;
   font-weight: bold;
-  /* float: right; */
   width: 10%;
   font-family: 'Blinker', sans-serif;
   background-color: #e40e06;
@@ -163,19 +193,31 @@ h2 {
   display: flex;
   padding: .5rem;
   margin-top: 1rem;
-  margin-left: 2rem;
+  margin-left: 3rem;
   margin-bottom: 4rem;
   font-size: 2rem;
   line-height: 1;
   color: #eed7d7;
   font-weight: bold;
   text-align: center;
+  /* align-content: center; */
   padding: .5rem;
   padding-bottom: 1rem;
 }
 
-.delete-btn:hover {
+.deleteOrder:hover {
   background-color: #eed7d7;
   border: #e40e06 4px solid;
   color: #e40e06;
+}
+
+.profileDiv {
+  margin-top: -2rem;
+  margin-left: 3rem;
+}
+
+.userPic {
+  margin-bottom: 1.5rem;
+  border: #183302 5px solid;
+  border-radius: 12px;
 }

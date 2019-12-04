@@ -1,10 +1,12 @@
-import React from 'react';
+// import React from 'react';
+// import LoginNav from '../../components/Nav/LoginNav';
 
-export const Home = props => (
-	<div className="imageDiv">
-		<a href="/">
-			<img src="/image/Eye.png" alt="all-seeing eye" width="400" />
-			<h1 className="title">sauron</h1>
-		</a>
-	</div>
-);
+
+// export const Home = () => {
+	
+// 	return (
+// 		<div className="imageDiv">
+// 			<LoginNav />
+// 		</div>
+// 	);
+// };
