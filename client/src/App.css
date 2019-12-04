@@ -1,5 +1,6 @@
 
 html, body, #root, #root>div {
+  height: 100%;
   background-color: #bfee14;
 }
 
@@ -33,8 +34,8 @@ button {
   font-weight: bold;
   font-size: 1.5rem;
   color: #183302;
-  margin-top: -38rem;
-  margin-right: -70rem;
+  margin-top: -40rem;
+  margin-right: -100rem;
   margin-bottom: -19rem;
 }
 
@@ -44,7 +45,7 @@ button {
   font-size: 4rem;
   color: #3c8005;
   margin-left: 2rem;
-  margin-top: -4rem;
+  margin-top: -2rem;
 
 }
 
@@ -164,6 +165,7 @@ h2 {
   border: #081101 4px solid;
   border-radius: 10px;
   margin-left: 3rem;
+  margin-right: 3rem;
   margin-top: 2rem;
   height: 30%;
 }
@@ -212,7 +214,7 @@ h2 {
 }
 
 .profileDiv {
-  margin-top: -2rem;
+  margin-top: -0rem;
   margin-left: 3rem;
 }
 

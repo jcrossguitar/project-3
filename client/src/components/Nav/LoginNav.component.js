@@ -18,11 +18,11 @@ const LoginNav = () => {
           }
         >
         <img src="/image/Eye.png" alt="all-seeing eye" width="400" ></img>
-				<h1 className="title">SAURON</h1>
+				<h1 className="title">sauron</h1>
         </button>
       )}
 
-      {isAuthenticated && <button onClick={() => logout()} className="logout">Log out</button>}
+      {isAuthenticated && <button onClick={() => logout()} className="logout">logout</button>}
 
 
       {/* {isAuthenticated ? (<Nav />) : (<button
