@@ -34,12 +34,11 @@ function App() {
   }
   return (
       <div className="App">
-
+        
         <LoginNav />
-
-          
         <Nav />
           
+
             <Router history={history}>
               <Switch>
                 <Route exact path="/" component={Home} />
